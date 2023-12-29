@@ -18,12 +18,15 @@ var result;
 // Takes players choice and creates variable
 function getPlayerChoice() {
 
-    let button = document.getElementsByClassName("player-btn")
+    let button = document.getElementsByClassName("player-btn");
+    let playerArea = document.getElementsByClassName("player-area");
 
     button.addEventListener("click", function(event) {
         playerChoice = event.target.name;
         console.log(playerChoice);
     })
+getCpuChoice();
+decideWinner();
 }
 
 // Randomly generates cpuChoice
