@@ -5,14 +5,23 @@ document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
 })
 
+// Creating variables and connecting them to html elements
+
+const playerArea = document.getElementsByClassName("player-area");
+const cpuArea = document.getElementsByClassName("cpu-area");
+const winnerDisplay = document.getElementsByClassName("winner-display");
+
+var playerChoice;
+var cpuChoice;
+var result;
 
 
-function playerChoice() {
+function getPlayerChoice() {
 
 }
 
 
-function cpuChoice() {
+function getCpuChoice() {
 
 }
 
