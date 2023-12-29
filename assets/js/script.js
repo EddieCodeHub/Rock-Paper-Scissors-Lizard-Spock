@@ -7,26 +7,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Creating variables and connecting them to html elements
 
-const playerArea = document.getElementsByClassName("player-area");
-const cpuArea = document.getElementsByClassName("cpu-area");
+
 const winnerDisplay = document.getElementsByClassName("winner-display");
 
 var playerChoice;
 var cpuChoice;
 var result;
 
-// Takes players choice and creates variable
+// Takes players choice, creates variable and displays choice
 function getPlayerChoice() {
 
     let button = document.getElementsByClassName("player-btn");
-    let playerArea = document.getElementsByClassName("player-area");
+    
 
     button.addEventListener("click", function(event) {
         playerChoice = event.target.name;
-        console.log(playerChoice);
     })
-getCpuChoice();
-decideWinner();
+
+    document.getElementbyId("player-choice").innerHTML = playerChoice
+    getCpuChoice();
 }
 
 // Randomly generates cpuChoice
@@ -34,21 +33,23 @@ function getCpuChoice() {
     var randomNumber = Math.floor(Math.random() * 5) + 1;
 
     if (randomNumber === 1) {
-        cpuChoice = "rock";
+        cpuChoice = "Rock";
     }
     if (randomNumber === 2) {
-        cpuChoice = "paper";
+        cpuChoice = "Paper";
     }
     if (randomNumber === 3) {
-        cpuChoice = "scissors";
+        cpuChoice = "Scissors";
     }
     if (randomNumber === 4) {
-        cpuChoice = "lizard";
+        cpuChoice = "Lizard";
     }
     if (randomNumber === 5) {
-        cpuChoice = "spock";
+        cpuChoice = "Spock";
     }
     
+    document.getElementById("cpu-choice").innerHTML = cpuChoice
+    decideWinner();
 }
 
 
