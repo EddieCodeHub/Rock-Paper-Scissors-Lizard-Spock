@@ -18,6 +18,12 @@ var result;
 // Takes players choice and creates variable
 function getPlayerChoice() {
 
+    let button = document.getElementsByClassName("player-btn")
+
+    button.addEventListener("click", function(event) {
+        playerChoice = event.target.name;
+        console.log(playerChoice);
+    })
 }
 
 // Randomly generates cpuChoice
@@ -25,19 +31,19 @@ function getCpuChoice() {
     var randomNumber = Math.floor(Math.random() * 5) + 1;
 
     if (randomNumber === 1) {
-        cpuChoice = "Rock";
+        cpuChoice = "rock";
     }
     if (randomNumber === 2) {
-        cpuChoice = "Paper";
+        cpuChoice = "paper";
     }
     if (randomNumber === 3) {
-        cpuChoice = "Scissors";
+        cpuChoice = "scissors";
     }
     if (randomNumber === 4) {
-        cpuChoice = "Lizard";
+        cpuChoice = "lizard";
     }
     if (randomNumber === 5) {
-        cpuChoice = "Spock";
+        cpuChoice = "spock";
     }
     
 }
