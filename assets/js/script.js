@@ -1,9 +1,3 @@
-// Wait for the DOM to finish loading before running the game
-//  Get the button elements and add event listeners to them
-
-document.addEventListener("DOMContentLoaded", function () {
-    let buttons = document.getElementsByTagName("button");
-})
 
 // Creating variables and connecting them to html elements
 
@@ -15,16 +9,12 @@ var cpuChoice;
 var result;
 
 // Takes players choice, creates variable and displays choice
-function getPlayerChoice() {
+function getPlayerChoice(value) {
 
-    let button = document.getElementsByClassName("player-btn");
-    
-
-    button.addEventListener("click", function(event) {
-        playerChoice = event.target.name;
-    })
-
-    document.getElementbyId("player-choice").innerHTML = playerChoice
+    playerChoice = value;
+    alert("you clicked button " + playerChoice);
+    let choiceDisplay = document.getElementById("player-choice");
+    choiceDisplay.textContent = playerChoice;
     getCpuChoice();
 }
 
