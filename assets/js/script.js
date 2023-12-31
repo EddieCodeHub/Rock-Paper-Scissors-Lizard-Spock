@@ -7,6 +7,8 @@ const winnerDisplay = document.getElementsByClassName("winner-display");
 var playerChoice;
 var cpuChoice;
 var result;
+var winner;
+
 
 // Takes players choice, creates variable and displays choice
 function getPlayerChoice(value) {
@@ -84,7 +86,7 @@ switch(outcomes) {
         break;
 }
 
-alert(result;)
+alert(result);
 
 if (result === "player-point") {
     playerScoreUp();
@@ -101,17 +103,29 @@ if (result === "cpu-point") {
 function playerScoreUp() {
     let playerScore = parseInt(document.getElementById("player-score").innerText);
     document.getElementById("player-score").innerText = ++playerScore;
+
+    if (playerScore === 3) {
+        winner = "player-wins"
+        gameWinner();
+    }
     
+
 }
 
 // increments cpu score
 function cpuScoreUp() {
     let cpuScore = parseInt(document.getElementById("cpu-score").innerText);
     document.getElementById("cpu-score").innerText = ++cpuScore;
+
+    if (cpuScore === 3) {
+        winner = "cpu-wins"
+        gameWinner();
+    }
     
+
 }
 
 // main game loop to decide overall winner and restart game
 function gameWinner() {
-
+    alert(winner);
 }
