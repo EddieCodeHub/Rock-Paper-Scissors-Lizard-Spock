@@ -14,7 +14,6 @@ function getPlayerChoice(value) {
     playerChoice = value;
     let choiceDisplay = document.getElementById("player-choice");
     choiceDisplay.innerHTML = playerChoice;
-    alert(playerChoice);
     getCpuChoice();
 }
 
@@ -76,14 +75,16 @@ switch(outcomes) {
 
         break;
     // cases for a draw 
-    case "rockrock":
-    case "paperpaper":
-    case "scissorsscissors":
-    case "spockspock":
-    case "lizardlizard":
+    case "RockRock":
+    case "PaperPaper":
+    case "ScissorsScissors":
+    case "SpockSpock":
+    case "LizardLizard":
         result = "draw";
         break;
 }
+
+alert(result;)
 
 if (result === "player-point") {
     playerScoreUp();
@@ -91,6 +92,8 @@ if (result === "player-point") {
 if (result === "cpu-point") {
     cpuScoreUp();
 }
+
+
 
 }
 
