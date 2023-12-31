@@ -83,10 +83,10 @@ switch(outcomes) {
     case "SpockSpock":
     case "LizardLizard":
         result = "draw";
+        alert("draw!");
         break;
 }
 
-alert(result);
 
 if (result === "player-point") {
     playerScoreUp();
@@ -106,7 +106,7 @@ function playerScoreUp() {
 
     if (playerScore === 3) {
         winner = "player-wins"
-        gameWinner();
+        playerWins();
     }
     
 
@@ -119,13 +119,26 @@ function cpuScoreUp() {
 
     if (cpuScore === 3) {
         winner = "cpu-wins"
-        gameWinner();
+        cpuWins();
     }
     
 
 }
 
-// main game loop to decide overall winner and restart game
-function gameWinner() {
-    alert(winner);
+// triggers player winning screen 
+function playerWins() {
+    alert("player wins!");
+    resetPage();
 }
+
+// triggers cpu winning screen 
+function cpuWins() {
+    alert("cpu wins!");
+    resetPage();
+}
+
+
+// resets page to restart game
+function resetPage() {
+    location.reload();
+  }
