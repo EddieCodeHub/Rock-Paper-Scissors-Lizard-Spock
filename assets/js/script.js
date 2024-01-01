@@ -1,16 +1,11 @@
-
 // Creating variables and connecting them to html elements
-
-
 var playerChoice;
 var cpuChoice;
 var result;
 var winner;
 
-
 // Takes players choice, creates variable and displays choice
 function getPlayerChoice(value) {
-
     playerChoice = value;
     let choiceDisplay = document.getElementById("player-choice");
     choiceDisplay.innerHTML = playerChoice;
@@ -84,16 +79,12 @@ switch(outcomes) {
         break;
 }
 
-
 if (result === "player-point") {
     playerScoreUp();
 }
 if (result === "cpu-point") {
     cpuScoreUp();
 }
-
-
-
 }
 
 // increments player score
@@ -106,8 +97,6 @@ function playerScoreUp() {
         playerWins();
         removeButtons();
     }
-    
-
 }
 
 // increments cpu score
@@ -120,8 +109,6 @@ function cpuScoreUp() {
         cpuWins();
         removeButtons();
     }
-    
-
 }
 
 // triggers player winning screen 
@@ -129,15 +116,11 @@ function playerWins() {
     let playerWinDiv = document.createElement("div");
     playerWinDiv.id = "player-win-box"
     let html = `
-    <h2> Player Wins!</h2>
+    <h2>Player Wins!</h2>
     <button onclick="resetPage()" id="replay-btn">Replay!</button>
     `;
     playerWinDiv.innerHTML = html;
     document.body.appendChild(playerWinDiv);
-    
-    
-
-
 }
 
 // triggers cpu winning screen 
@@ -145,7 +128,7 @@ function cpuWins() {
     let cpuWinDiv = document.createElement("div");
     cpuWinDiv.id = "cpu-win-box";
     let html = `
-    <h2> cpu Wins!</h2>
+    <h2>CPU Wins!</h2>
     <button onclick="resetPage()" id="replay-btn">Replay!</button>
     `;
     cpuWinDiv.innerHTML = html;
@@ -153,8 +136,8 @@ function cpuWins() {
 }
 
 
+// removes player buttons until game is restarted
 function removeButtons() {
-    alert("disable called");
     var playerArea = document.getElementById("player-area");
     playerArea.remove();
 }
@@ -163,4 +146,3 @@ function removeButtons() {
 function resetPage() {
     location.reload();
 }
-
