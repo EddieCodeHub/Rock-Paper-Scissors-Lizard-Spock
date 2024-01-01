@@ -2,8 +2,6 @@
 // Creating variables and connecting them to html elements
 
 
-const winnerDisplay = document.getElementsByClassName("winner-display");
-
 var playerChoice;
 var cpuChoice;
 var result;
@@ -83,7 +81,6 @@ switch(outcomes) {
     case "SpockSpock":
     case "LizardLizard":
         result = "draw";
-        alert("draw!");
         break;
 }
 
@@ -107,6 +104,7 @@ function playerScoreUp() {
     if (playerScore === 3) {
         winner = "player-wins"
         playerWins();
+        removeButtons();
     }
     
 
@@ -120,6 +118,7 @@ function cpuScoreUp() {
     if (cpuScore === 3) {
         winner = "cpu-wins"
         cpuWins();
+        removeButtons();
     }
     
 
@@ -133,9 +132,12 @@ function playerWins() {
     <h2> Player Wins!</h2>
     <button onclick="resetPage()" id="replay-btn">Replay!</button>
     `;
-
     playerWinDiv.innerHTML = html;
     document.body.appendChild(playerWinDiv);
+    
+    
+
+
 }
 
 // triggers cpu winning screen 
@@ -146,13 +148,19 @@ function cpuWins() {
     <h2> cpu Wins!</h2>
     <button onclick="resetPage()" id="replay-btn">Replay!</button>
     `;
-    
     cpuWinDiv.innerHTML = html;
     document.body.appendChild(cpuWinDiv);
 }
 
 
+function removeButtons() {
+    alert("disable called");
+    var playerArea = document.getElementById("player-area");
+    playerArea.remove();
+}
+
 // resets page to restart game
 function resetPage() {
     location.reload();
-  }
+}
+
