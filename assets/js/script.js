@@ -127,14 +127,28 @@ function cpuScoreUp() {
 
 // triggers player winning screen 
 function playerWins() {
-    alert("player wins!");
-    resetPage();
+    let playerWinDiv = document.createElement("div");
+    playerWinDiv.id = "player-win-box"
+    let html = `
+    <h2> Player Wins!</h2>
+    <button onclick="resetPage()" id="replay-btn">Replay!</button>
+    `;
+
+    playerWinDiv.innerHTML = html;
+    document.body.appendChild(playerWinDiv);
 }
 
 // triggers cpu winning screen 
 function cpuWins() {
-    alert("cpu wins!");
-    resetPage();
+    let cpuWinDiv = document.createElement("div");
+    cpuWinDiv.id = "cpu-win-box";
+    let html = `
+    <h2> cpu Wins!</h2>
+    <button onclick="resetPage()" id="replay-btn">Replay!</button>
+    `;
+    
+    cpuWinDiv.innerHTML = html;
+    document.body.appendChild(cpuWinDiv);
 }
 
 
