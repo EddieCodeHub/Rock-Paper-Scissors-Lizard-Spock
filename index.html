@@ -12,28 +12,7 @@
     <h1 class="heading">
         Rock Paper Scissors Lizard Spock!
     </h1>
-    <h4>Rules!</h4>
-    <p>
-        Rock crushes scissors
-        <br>
-        Scissors cuts paper
-        <br>
-        Paper covers rock
-        <br>
-        Rock crushes lizard
-        <br>
-        Lizard poisons Spock
-        <br>
-        Spock smashes scissors
-        <br>
-        Scissors decapitates lizard
-        <br>
-        Lizard eats paper
-        <br>
-        Paper disproves Spock
-        <br>        
-        Spock vaporizes rock
-        </p>
+    <button id="rules-btn">Rules!</button>
     <div id="game-area">
         <div id="player-area">
             <button onclick="getPlayerChoice(this.value)" value="Rock" class="player-btn" id="rock-btn">Rock</button>
@@ -60,8 +39,8 @@
         </div>
     </div>
     <div class="score-area">
-        <p class="scores">Player <span id="player-score">0</span></p>
-        <p class="scores">CPU <span id="cpu-score">0</span></p>
+        <p class="score-lable">Player <span class="scores" id="player-score">0</span></p>
+        <p class="scores-lable">CPU <span class="scores" id="cpu-score">0</span></p>
     </div>
     <script src="assets/js/script.js"></script>
 </body>
