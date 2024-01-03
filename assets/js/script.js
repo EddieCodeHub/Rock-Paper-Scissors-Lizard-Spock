@@ -3,8 +3,15 @@ var playerChoice;
 var cpuChoice;
 var result;
 var winner;
+let rulesButton = document.getElementById("rules-btn");
+rulesButton.addEventListener("click", rulesWindow());
+let replayButton = document.getElementById("replay-btn");
+replayButton.addEventListener("click", resetScores());
 
-// Takes players choice, creates variable and displays choice
+
+/**
+ * Takes players choice, creates variable and displays choice 
+ */
 function getPlayerChoice(value) {
     playerChoice = value;
     let choiceDisplay = document.getElementById("player-choice");
@@ -12,7 +19,44 @@ function getPlayerChoice(value) {
     getCpuChoice();
 }
 
-// Randomly generates cpuChoice
+/**
+ * creates small window to display rules when hovered
+ */
+function rulesWindow() {
+    rulesButton.addEventListener("click", function() {
+        let rulesDiv = document.createElement("div");
+        rulesDiv.id = "rules-window";
+        let html = `
+            <p>
+            Rock crushes scissors
+            <br>
+            Scissors cuts paper
+            <br>
+            Paper covers rock
+            <br>
+            Rock crushes lizard
+            <br>
+            Lizard poisons Spock
+            <br>
+            Spock smashes scissors
+            <br>
+            Scissors decapitates lizard
+            <br>
+            Lizard eats paper
+            <br>
+            Paper disproves Spock
+            <br>        
+            Spock vaporizes rock
+            </p>
+            `;
+        rulesDiv.innerHTML = html;
+        document.body.appendChild(rulesDiv);
+    })
+}
+
+/**
+* Randomly generates cpuChoice  
+*/
 function getCpuChoice() {
     var randomNumber = Math.floor(Math.random() * 5) + 1;
     if (randomNumber === 1) {
@@ -30,11 +74,14 @@ function getCpuChoice() {
     if (randomNumber === 5) {
         cpuChoice = "Spock";
     }
-    document.getElementById("cpu-choice").innerHTML = cpuChoice
+    document.getElementById("cpu-choice").innerHTML = cpuChoice;
     decideWinner();
 }
 
-//decides winner and triggers appropriate function
+/**
+* decides winner and triggers appropriate function 
+*/
+
 function decideWinner() {
 
 var outcomes = playerChoice + cpuChoice;
@@ -87,34 +134,38 @@ if (result === "cpu-point") {
 }
 }
 
-// increments player score
+/** 
+* increments player score 
+*/ 
 function playerScoreUp() {
     let playerScore = parseInt(document.getElementById("player-score").innerText);
     document.getElementById("player-score").innerText = ++playerScore;
 
     if (playerScore === 3) {
-        winner = "player-wins"
+        winner = "player-wins";
         playerWins();
-        removeButtons();
     }
 }
 
-// increments cpu score
+/** 
+* increments cpu score 
+*/
 function cpuScoreUp() {
     let cpuScore = parseInt(document.getElementById("cpu-score").innerText);
     document.getElementById("cpu-score").innerText = ++cpuScore;
 
     if (cpuScore === 3) {
-        winner = "cpu-wins"
+        winner = "cpu-wins";
         cpuWins();
-        removeButtons();
     }
 }
 
-// triggers player winning screen 
+/** 
+* triggers player winning screen 
+*/
 function playerWins() {
     let playerWinDiv = document.createElement("div");
-    playerWinDiv.id = "player-win-box"
+    playerWinDiv.id = "player-win-box";
     let html = `
     <h2>Player Wins!</h2>
     <button onclick="resetPage()" id="replay-btn">Replay!</button>
@@ -123,7 +174,9 @@ function playerWins() {
     document.body.appendChild(playerWinDiv);
 }
 
-// triggers cpu winning screen 
+/**
+* triggers cpu winning screen 
+*/
 function cpuWins() {
     let cpuWinDiv = document.createElement("div");
     cpuWinDiv.id = "cpu-win-box";
@@ -136,13 +189,11 @@ function cpuWins() {
 }
 
 
-// removes player buttons until game is restarted
-function removeButtons() {
-    var playerArea = document.getElementById("player-area");
-    playerArea.remove();
-}
+/**
+*  resets scores to restart game 
+*/
 
-// resets page to restart game
 function resetPage() {
     location.reload();
 }
+
