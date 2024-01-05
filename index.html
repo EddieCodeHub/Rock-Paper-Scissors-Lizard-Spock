@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Preahvihear&family=Rubik+Doodle+Triangles&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Rock-Paper-Scissors-Lizard-Spock</title>
 </head>
 <body>
@@ -13,13 +14,38 @@
         Rock Paper Scissors Lizard Spock!
     </h1>
     <button id="rules-btn">Rules!</button>
+    <dialog class="modal" id="modal">
+        <h3>Rules</h3>
+        <p>
+            Rock crushes scissors
+            <br>
+            Scissors cuts paper
+            <br>
+            Paper covers rock
+            <br>
+            Rock crushes lizard
+            <br>
+            Lizard poisons Spock
+            <br>
+            Spock smashes scissors
+            <br>
+            Scissors decapitates lizard
+            <br>
+            Lizard eats paper
+            <br>
+            Paper disproves Spock
+            <br>        
+            Spock vaporizes rock
+        </p>
+        <button id="btn-close-rules">Got it!</button>
+    </dialog>
     <div id="game-area">
         <div id="player-area">
-            <button onclick="getPlayerChoice(this.value)" value="Rock" class="player-btn" id="rock-btn">Rock</button>
-            <button onclick="getPlayerChoice(this.value)" value="Paper" class="player-btn" id="paper-btn">Paper</button>
-            <button onclick="getPlayerChoice(this.value)" value="Scissors" class="player-btn" id="scissors-btn">Scissors</button>
-            <button onclick="getPlayerChoice(this.value)" value="Lizard" class="player-btn" id="lizard-btn">Lizard</button>
-            <button onclick="getPlayerChoice(this.value)" value="Spock" class="player-btn" id="spock-btn">Spock</button>
+            <button onclick="getPlayerChoice(this.value)" value="Rock" class="player-btn" id="rock-btn"><i id="rock-img"></i></button>
+            <button onclick="getPlayerChoice(this.value)" value="Paper" class="player-btn" id="paper-btn"><i id="paper-img"></i></button>
+            <button onclick="getPlayerChoice(this.value)" value="Scissors" class="player-btn" id="scissors-btn"><i id="scissors-img"></i></button>
+            <button onclick="getPlayerChoice(this.value)" value="Lizard" class="player-btn" id="lizard-btn"><i id="lizard-img"></i></button>
+            <button onclick="getPlayerChoice(this.value)" value="Spock" class="player-btn" id="spock-btn"><i id="spock-img"></i></button>
             
         </div>
         <div id="cpu-area">
