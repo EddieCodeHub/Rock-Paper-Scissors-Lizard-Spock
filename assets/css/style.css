@@ -1,0 +1,40 @@
+#rock-btn {
+    display: flex; 
+    background: url("../images/rock_50x50_img.png");
+    height: 50px;
+    width: 50px;
+    border: 0px;
+}
+
+#paper-btn {
+    display: flex;
+    background: url("../images/paper_50x50_img.png");
+    height: 50px;
+    width: 50px;
+    border: 0px;
+}
+
+#scissors-btn {
+    display: flex;
+    background: url("../images/scissors_50x50_img.png");
+    height: 50px;
+    width: 50px;
+    border: 0px;
+}
+
+#lizard-btn {
+    display: flex;
+    background: url("../images/lizard_50x50_img.png");
+    height: 50px;
+    width: 50px;
+    border: 0px;
+}
+
+#spock-btn {
+    display: flex;
+    background: url("../images/spock_50x50_img.png");
+    height: 50px;
+    width: 50px;
+    border: 0px;
+}
+
