@@ -1,13 +1,19 @@
 // Creating variables and connecting them to html elements
-var playerChoice;
-var cpuChoice;
-var result;
-var winner;
+let playerChoice;
+let cpuChoice;
+let result;
+let winner;
 let rulesButton = document.getElementById("rules-btn");
-rulesButton.addEventListener("click", rulesWindow());
-let replayButton = document.getElementById("replay-btn");
-replayButton.addEventListener("click", resetScores());
+let closeRulesButton = document.getElementById("btn-close-rules");
 
+// Event listeners for rules modal
+rulesButton.addEventListener("click", ()=> {
+    modal.showModal();
+}); 
+
+closeRulesButton.addEventListener("click", ()=> {
+    modal.close();
+});
 
 /**
  * Takes players choice, creates variable and displays choice 
@@ -16,47 +22,12 @@ function getPlayerChoice(value) {
     playerChoice = value;
     let choiceDisplay = document.getElementById("player-choice");
     choiceDisplay.innerHTML = playerChoice;
-    getCpuChoice();
+   getCpuChoice();
 }
 
 /**
- * creates small window to display rules when hovered
+ * Randomly generates cpuChoice  
  */
-function rulesWindow() {
-    rulesButton.addEventListener("click", function() {
-        let rulesDiv = document.createElement("div");
-        rulesDiv.id = "rules-window";
-        let html = `
-            <p>
-            Rock crushes scissors
-            <br>
-            Scissors cuts paper
-            <br>
-            Paper covers rock
-            <br>
-            Rock crushes lizard
-            <br>
-            Lizard poisons Spock
-            <br>
-            Spock smashes scissors
-            <br>
-            Scissors decapitates lizard
-            <br>
-            Lizard eats paper
-            <br>
-            Paper disproves Spock
-            <br>        
-            Spock vaporizes rock
-            </p>
-            `;
-        rulesDiv.innerHTML = html;
-        document.body.appendChild(rulesDiv);
-    })
-}
-
-/**
-* Randomly generates cpuChoice  
-*/
 function getCpuChoice() {
     var randomNumber = Math.floor(Math.random() * 5) + 1;
     if (randomNumber === 1) {
@@ -79,11 +50,10 @@ function getCpuChoice() {
 }
 
 /**
-* decides winner and triggers appropriate function 
-*/
+ * decides winner and triggers appropriate function 
+ */
 
 function decideWinner() {
-
 var outcomes = playerChoice + cpuChoice;
 
 switch(outcomes) {
@@ -135,8 +105,8 @@ if (result === "cpu-point") {
 }
 
 /** 
-* increments player score 
-*/ 
+ * increments player score 
+ */ 
 function playerScoreUp() {
     let playerScore = parseInt(document.getElementById("player-score").innerText);
     document.getElementById("player-score").innerText = ++playerScore;
@@ -148,8 +118,8 @@ function playerScoreUp() {
 }
 
 /** 
-* increments cpu score 
-*/
+ * increments cpu score 
+ */
 function cpuScoreUp() {
     let cpuScore = parseInt(document.getElementById("cpu-score").innerText);
     document.getElementById("cpu-score").innerText = ++cpuScore;
@@ -161,8 +131,8 @@ function cpuScoreUp() {
 }
 
 /** 
-* triggers player winning screen 
-*/
+ * triggers player winning screen 
+ */
 function playerWins() {
     let playerWinDiv = document.createElement("div");
     playerWinDiv.id = "player-win-box";
@@ -172,11 +142,12 @@ function playerWins() {
     `;
     playerWinDiv.innerHTML = html;
     document.body.appendChild(playerWinDiv);
+    
 }
 
 /**
-* triggers cpu winning screen 
-*/
+ * triggers cpu winning screen 
+ */
 function cpuWins() {
     let cpuWinDiv = document.createElement("div");
     cpuWinDiv.id = "cpu-win-box";
@@ -190,9 +161,8 @@ function cpuWins() {
 
 
 /**
-*  resets scores to restart game 
-*/
-
+ *  resets scores to restart game 
+ */
 function resetPage() {
     location.reload();
 }
