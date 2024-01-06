@@ -9,7 +9,7 @@ let closeRulesButton = document.getElementById("btn-close-rules");
 
 // Event listeners for rules modal
 rulesButton.addEventListener("click", ()=> {
-    modal.showModal();
+    modal.showModal(); console.log("modal called");
 }); 
 
 closeRulesButton.addEventListener("click", ()=> {
@@ -139,7 +139,7 @@ function playerWins() {
     playerWinDiv.id = "player-win-box";
     let html = `
     <h2>Player Wins!</h2>
-    <div id="win-img-div"><i id="won-img"></div>
+    <div id="win-img-div"><i id="win-img"></div>
     <button onclick="resetPage()" id="replay-btn">Replay!</button>
     `;
     playerWinDiv.innerHTML = html;
