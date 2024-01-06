@@ -11,9 +11,11 @@
     <title>Rock-Paper-Scissors-Lizard-Spock</title>
 </head>
 <body>
-    <h1 class="heading">
-        Rock Paper Scissors Lizard Spock - Retro Edition
-    </h1>
+    <div id="heading-div">
+        <h1 class="heading">
+            Rock Paper Scissors Lizard Spock - Retro Edition
+        </h1>
+    </div>
     <button id="rules-btn">Rules!</button>
     <dialog class="modal" id="modal">
         <h3>Rules</h3>
@@ -56,20 +58,25 @@
 
     </div>
     <div class="choice-display">
-        <div class="choice">
-            <h4 class="display-labels">
+        <div class="choice" id="player-choice-div">
+            <h4 class="display-labels" id="player-choice-label">
                 You Chose: <span class="choices" id="player-choice"></span>
             </h4>
         </div>
-        <div class="choice">
-            <h4 class="display-labels">
+        <div class="choice" id="cpu-choice-div">
+            <h4 class="display-labels" id="cpu-choice-label">
                 Cpu Chose: <span class="choices" id="cpu-choice"></span>
             </h4>
         </div>
     </div>
+    
     <div class="score-area">
-        <p class="score-lable">Player <span class="scores" id="player-score">0</span></p>
-        <p class="scores-lable">CPU <span class="scores" id="cpu-score">0</span></p>
+        <span class="score-lable" id="player-score-label">Player</span>
+        <div class="score-board">
+            <span class="scores" id="player-score">0</span>
+            <span class="scores" id="cpu-score">0</span>
+        </div>
+        <span class="scores-lable" id="cpu-score-label">CPU</span>
     </div>
     <script src="assets/js/script.js"></script>
 </body>
