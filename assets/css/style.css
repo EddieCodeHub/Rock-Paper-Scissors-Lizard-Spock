@@ -1,3 +1,14 @@
+
+/* Asterisk wildcard selector to override default styles added by the browser */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Main Content */
 body {
     background-color: #991f00;
 }
@@ -14,9 +25,10 @@ body {
     margin: auto;
     margin-top: 5%;
     border-radius: 5px;
-    align-content: center;
+    text-align: center;
     border-width: 2px;
     border-color: black;
+    box-shadow: 0 4px 4px #3a3a3a
 }
 
 .choices, .display-labels, .score-area {
@@ -25,18 +37,21 @@ body {
 
 }
 
+
+/* Rules modal */
 #modal {
     font-family: 'Preahvihear', sans-serif;
-}
-
-#modal {
     background-color: #0099cc;
+    margin: auto;
+    padding: 5%;
 }
 
 #btn-close-rules {
     background-color: #99e6ff;
     font-family: 'Press Start 2P', system-ui;
     padding: 10px;
+    margin-left: 5%;
+    margin-top: 5%;
     
 }
 
@@ -51,7 +66,7 @@ body {
     border-color: black;
 }
 
-
+/* Game area */
 
 #player-area {
     background-color: #ff8566;
@@ -63,6 +78,7 @@ body {
     margin: auto;
     border-radius: 5px;
     border-width: 5px;
+    box-shadow: 0 4px 4px #3a3a3a
 }
 
 #buttons-top, #buttons-bottom {
@@ -71,16 +87,18 @@ body {
     align-self: center;
 }
 
+
 .player-btn {
     display: flex;
     align-self: center;
     margin: 10px 20px;
 }
 
+/* Player button images */
 
 #rock-btn {
     display: flex; 
-    background: url("../images/rock_50x50_img.png");
+    background: url("../images/rock_50x50_img.png")no-repeat top center/cover;
     height: 50px;
     width: 50px;
     border: 0px;
@@ -88,7 +106,7 @@ body {
 
 #paper-btn {
     display: flex;
-    background: url("../images/paper_50x50_img.png");
+    background: url("../images/paper_50x50_img.png")no-repeat top center/cover;
     height: 50px;
     width: 50px;
     border: 0px;
@@ -96,7 +114,7 @@ body {
 
 #scissors-btn {
     display: flex;
-    background: url("../images/scissors_50x50_img.png");
+    background: url("../images/scissors_50x50_img.png")no-repeat top center/cover;
     height: 50px;
     width: 50px;
     border: 0px;
@@ -104,7 +122,7 @@ body {
 
 #lizard-btn {
     display: flex;
-    background: url("../images/lizard_50x50_img.png");
+    background: url("../images/lizard_50x50_img.png")no-repeat top center/cover;
     height: 50px;
     width: 50px;
     border: 0px;
@@ -112,24 +130,30 @@ body {
 
 #spock-btn {
     display: flex;
-    background: url("../images/spock_50x50_img.png");
+    background: url("../images/spock_50x50_img.png")no-repeat top center/cover;
     height: 50px;
     width: 50px;
     border: 0px;
 }
 
+/* Choice area */
+
 .choice-display {
     background-color: #ff8566;
     padding: 20px;
-    margin: 10% 2.5%;
+    margin: auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
     width: 80vw;
     border-radius: 5px;
+    box-shadow: 0 4px 4px #3a3a3a
 }
+
 #player-choice-div {
     margin-bottom: 30px;
 }
 
-
+/* Game over screen */
 #player-win-box, #cpu-win-box {
     background-color: #0099cc;
     font-family: 'Press Start 2P', system-ui;
@@ -145,18 +169,20 @@ body {
     border-width: 3px;
     text-align: center;
     padding-top: 10px;
+    box-shadow: 0 4px 4px #3a3a3a
 }
 
 #win-img-div {
-    background-image: url(../images/win_150x150_img.png);
+    background: url(../images/win_150x150_img.png)no-repeat top center/cover;
     height: 150px;
     width: 150px;
     margin: auto;
+    
 
 }
 
 #lost-img-div {
-    background-image: url(../images/lost_150x150_img.png);
+    background: url(../images/lost_150x150_img.png)no-repeat top center/cover;
     height: 150px;
     width: 150px;
     margin: auto;
@@ -173,13 +199,21 @@ body {
     border-radius: 5px;
     border-color: black;
     padding: 10px;
+    box-shadow: 0 2px 2px #3a3a3a
 }
 
+
+/* Score area */
 .score-area {
     background-color: #66ff66;
     padding: 10%;
     text-align: center;
     border-radius: 5px;
+    box-shadow: 0 4px 4px #3a3a3a;
+    width: 80vw;
+    margin: auto;
+    height: 10vh;
+    
 }
 
 .score-board {
@@ -192,12 +226,243 @@ body {
 
 #player-score-label {
     position: absolute;
-    left: 5%;
+    left: 15%;
     margin-bottom: 30px;
 }
 
 #cpu-score-label {
     position: absolute;
-    right: 5%;
+    right: 15%;
     margin-bottom: 30px;
+}
+
+
+/* Media queary for tablets and larger (768px and up) */
+
+@media screen and (min-width:768px) {
+    /* Heading */
+    .heading {
+        font-size: x-large;
+    }
+    
+    /* Small buttons */
+    #replay-btn, #rules-btn, #btn-close-rules {
+        font-size: large;
+    }
+
+    /* Player area */
+    #player-area {
+        height: 35vh;
+        align-content: space-between;
+    }
+
+    /* Player buttons */
+    .player-btn {
+        min-width: 100px;
+        min-height: 100px;
+    }
+
+    #buttons-top {
+        margin-bottom: 10px;
+        height: auto;
+        position: relative;
+        align-content: space-between;
+    }
+
+    #buttons-bottom {
+        height: auto;
+        position: relative;
+        align-content: space-between;
+        align-self: baseline, center;
+        margin-top: 10px;
+    }
+
+    #rock-btn {
+        position: relative;
+    }
+
+    #lizard-btn {
+        position: relative;
+    }
+
+    #scissors-btn {
+        position: relative;
+    }
+
+    #spock-btn {
+        position: relative;
+    }
+
+
+    /* Choice area */
+    .display-labels, .choices {
+        font-size: x-large;
+    }
+
+    /* Score area */
+    #player-score-label, #cpu-score-label {
+        font-size: x-large;
+    }
+
+    .score-board {
+        font-size: xx-large;
+    }
+
+    /* Rules modal */
+    #modal {
+        margin: auto;
+        font-size: x-large;
+    }
+
+    /* Game end windows */
+    #player-win-box, #cpu-win-box {
+        font-size: large;
+        height: 60vh;
+    }
+
+    #win-img, #win-img-div, #lost-img, #lost-img-div {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+
+
+/* Media queary for laptops and up (1024px and up) */
+
+@media screen and (min-width:1024px) {
+
+    /* Player area */
+    #player-area {
+        height: 50vh;
+        width: 40vw;
+        position: relative;
+    }
+
+    #game-section {
+        position: relative;
+        width: 90vw;
+        margin: 5% 5%;
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+     /* Choice area */
+     .display-labels, .choices {
+        font-size: large;
+    }
+
+    .choice-display {
+        width: 40vw;
+        position: relative;
+        height: 20vh;
+    }
+
+    .score-area {
+        margin-bottom: 30px;
+    }
+
+    /* Game end windows */
+    #player-win-box, #cpu-win-box {
+        font-size: x-large;
+        height: 60vh;
+    }
+
+}
+
+/* Media queary for large laptops and up (1440px and up) */
+
+@media screen and (min-width:1440px) {
+    /* Heading */
+    .heading {
+        font-size: xx-large;
+    }
+    
+    /* Small buttons */
+
+    #replay-btn, #rules-btn, #btn-close-rules {
+        font-size: x-large;
+    }
+
+    #rules-btn {
+        position: absolute;
+        top: 25%;
+        right: 5%;
+    }
+
+    /* Player area */
+    #player-area {
+        height: 50vh;
+        width: 40vw;
+        position: relative;
+    }
+
+    #game-section {
+        position: relative;
+        width: 90vw;
+        margin: 5% 5%;
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+     /* Player buttons */
+     .player-btn {
+        min-width: 150px;
+        min-height: 150px;
+    }
+
+     /* Choice area */
+    .display-labels, .choices {
+        font-size: x-large;
+    }
+
+    .choice-display {
+        width: 40vw;
+        position: relative;
+    }
+
+    /* Score area */
+    #player-score-label, #cpu-score-label {
+        font-size: x-large;
+    }
+
+    .score-board {
+        font-size: xx-large;
+    }
+
+    /* Rules modal */
+    #modal {
+        margin: auto;
+        font-size: x-large;
+    }
+
+    #rules-btn {
+        z-index: 99;
+    }
+
+    /* Game end window */
+    #player-win-box, #cpu-win-box {
+        font-size: x-large;
+        height: 85vh;
+        width: 90vw;
+        position: absolute;
+        left: 5%;
+    }
+
+    #win-img, #win-img-div, #lost-img, #lost-img-div {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* Media queary for 4k and up (2560px and up) */
+
+@media screen and (min-width:2560px) {
+
+    /* Game end window */
+    #player-win-box, #cpu-win-box {
+        height:80vh;
+    }
 }

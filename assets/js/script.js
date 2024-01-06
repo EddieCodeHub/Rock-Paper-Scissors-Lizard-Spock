@@ -9,7 +9,7 @@ let closeRulesButton = document.getElementById("btn-close-rules");
 
 // Event listeners for rules modal
 rulesButton.addEventListener("click", ()=> {
-    modal.showModal(); console.log("modal called");
+    modal.showModal();
 }); 
 
 closeRulesButton.addEventListener("click", ()=> {
