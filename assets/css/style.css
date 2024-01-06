@@ -123,6 +123,7 @@ body {
     padding: 20px;
     margin: 10% 2.5%;
     width: 80vw;
+    border-radius: 5px;
 }
 #player-choice-div {
     margin-bottom: 30px;
@@ -132,6 +133,7 @@ body {
 #player-win-box, #cpu-win-box {
     background-color: #0099cc;
     font-family: 'Press Start 2P', system-ui;
+    font-size: small;
     position: fixed;
     top: 10%;
     left: 10%;
@@ -142,7 +144,22 @@ body {
     border-color: black;
     border-width: 3px;
     text-align: center;
+    padding-top: 10px;
+}
 
+#win-img-div {
+    background-image: url(../images/win_150x150_img.png);
+    height: 150px;
+    width: 150px;
+    margin: auto;
+
+}
+
+#lost-img-div {
+    background-image: url(../images/lost_150x150_img.png);
+    height: 150px;
+    width: 150px;
+    margin: auto;
 }
 
 #replay-btn {
