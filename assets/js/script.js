@@ -6,6 +6,7 @@ let winner;
 let rulesButton = document.getElementById("rules-btn");
 let closeRulesButton = document.getElementById("btn-close-rules");
 
+
 // Event listeners for rules modal
 rulesButton.addEventListener("click", ()=> {
     modal.showModal();
@@ -20,9 +21,9 @@ closeRulesButton.addEventListener("click", ()=> {
  */
 function getPlayerChoice(value) {
     playerChoice = value;
-    let choiceDisplay = document.getElementById("player-choice");
-    choiceDisplay.innerHTML = playerChoice;
-   getCpuChoice();
+    let ChoiceDisplay = document.getElementById("player-choice");
+    ChoiceDisplay.innerHTML = playerChoice;
+    getCpuChoice();
 }
 
 /**

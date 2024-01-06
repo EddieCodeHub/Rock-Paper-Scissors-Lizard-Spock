@@ -1,3 +1,45 @@
+.heading {
+    font-family: 'Press Start 2P', system-ui;
+    font-size: large;
+    max-width: 90vw;
+
+}
+
+.choices, .display-labels, .score-area {
+    font-family: 'Press Start 2P', system-ui;
+    font-size: x-small;
+
+}
+
+#modal, #rules-btn, #btn-close-rules {
+    font-family: 'Preahvihear', sans-serif;
+}
+
+
+
+
+
+#player-area {
+    display: flex;
+    flex-direction: column;
+    column-count: 1;
+    align-content: space-between;
+    width: 300px;
+}
+
+#buttons-top, #buttons-bottom {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
+
+.player-btn {
+    display: flex;
+    align-self: center;
+    margin: 10px 20px
+}
+
+
 #rock-btn {
     display: flex; 
     background: url("../images/rock_50x50_img.png");
