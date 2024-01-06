@@ -139,6 +139,7 @@ function playerWins() {
     playerWinDiv.id = "player-win-box";
     let html = `
     <h2>Player Wins!</h2>
+    <div id="win-img-div"><i id="won-img"></div>
     <button onclick="resetPage()" id="replay-btn">Replay!</button>
     `;
     playerWinDiv.innerHTML = html;
@@ -154,6 +155,7 @@ function cpuWins() {
     cpuWinDiv.id = "cpu-win-box";
     let html = `
     <h2>CPU Wins!</h2>
+    <div id="lost-img-div"><i id="lost-img"></div>
     <button onclick="resetPage()" id="replay-btn">Replay!</button>
     `;
     cpuWinDiv.innerHTML = html;
