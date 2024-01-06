@@ -168,7 +168,8 @@ body {
 .score-board {
     position: absolute;
     left: 45%;
-    margin-bottom: 15%;
+    margin-bottom: 20px;
+    font-size: large;
     
 }
 
