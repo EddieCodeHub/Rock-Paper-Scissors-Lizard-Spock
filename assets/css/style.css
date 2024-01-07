@@ -194,7 +194,7 @@ body {
     background-color: #99e6ff;
     font-family: 'Press Start 2P', sans-serif;
     position: relative;
-    align-self: baseline center;
+    align-self: center;
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -277,7 +277,7 @@ body {
         height: auto;
         position: relative;
         align-content: space-between;
-        align-self: baseline, center;
+        align-self: center;
         margin-top: 10px;
     }
 
