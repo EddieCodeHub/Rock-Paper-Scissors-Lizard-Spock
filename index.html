@@ -19,6 +19,7 @@
         </h1>
     </div>
     <button id="rules-btn">Rules!</button>
+
     <dialog class="modal" id="modal">
         <h3>Rules</h3>
         <p>
@@ -44,6 +45,14 @@
         </p>
         <button id="btn-close-rules">Got it!</button>
     </dialog>
+    <div class="score-area">
+        <p class="score-lable" id="player-score-label">Player</p>
+        <div class="score-board">
+            <span class="scores" id="player-score">0</span>
+            <span class="scores" id="cpu-score">0</span>
+        </div>
+        <p class="score-lable" id="cpu-score-label">CPU</p>
+    </div>
     <section id="game-section">
         <div id="player-area">
             <div id="buttons-top">
@@ -73,14 +82,6 @@
         </div>
     </section>
     
-    <div class="score-area">
-        <p class="score-lable" id="player-score-label">Player</p>
-        <div class="score-board">
-            <span class="scores" id="player-score">0</span>
-            <span class="scores" id="cpu-score">0</span>
-        </div>
-        <p class="score-lable" id="cpu-score-label">CPU</p>
-    </div>
     <script src="assets/js/script.js"></script>
 </body>
 </html>
