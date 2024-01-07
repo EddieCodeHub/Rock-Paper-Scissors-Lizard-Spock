@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Meta tags for search engines -->
+    <meta name="description" content="Rock Paper Scissors Lizard Spock. Retro Chance Game">
+    <meta name="keywords" content="rock, paper, scissors, lizard, spock, retro, edition, game">
+
+    <!-- Links for fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Preahvihear&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Rock-Paper-Scissors-Lizard-Spock</title>
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Title -->
+    <title>Rock Paper Scissors Lizard Spock - Retro Edition</title>
 </head>
 <body>
+    <!-- Heading -->
     <div id="heading-div">
         <h1 class="heading">
             Rock Paper Scissors Lizard Spock -
@@ -18,8 +30,9 @@
             Retro Edition
         </h1>
     </div>
-    <button id="rules-btn">Rules!</button>
 
+    <!-- Rules modal and button -->
+    <button aria-label="rules button" id="rules-btn">Rules!</button>
     <dialog class="modal" id="modal">
         <h3>Rules</h3>
         <p>
@@ -45,6 +58,8 @@
         </p>
         <button id="btn-close-rules">Got it!</button>
     </dialog>
+
+    <!-- Scoreboard -->
     <div class="score-area">
         <p class="score-lable" id="player-score-label">Player</p>
         <div class="score-board">
@@ -53,8 +68,11 @@
         </div>
         <p class="score-lable" id="cpu-score-label">CPU</p>
     </div>
+
+    <!-- Game area -->
     <section id="game-section">
         <div id="player-area">
+            <!-- player buttons -->
             <div id="buttons-top">
                 <button onclick="getPlayerChoice(this.value)" value="Rock" class="player-btn" id="rock-btn"><i id="rock-img"></i></button>
                 <button onclick="getPlayerChoice(this.value)" value="Paper" class="player-btn" id="paper-btn"><i id="paper-img"></i></button>
@@ -67,7 +85,8 @@
         </div>
         <div id="cpu-area">
         </div>
-    
+        
+        <!-- Choice display -->
         <div class="choice-display">
             <div class="choice" id="player-choice-div">
                 <h4 class="display-labels" id="player-choice-label">
@@ -82,6 +101,7 @@
         </div>
     </section>
     
+    <!-- link to javascript -->
     <script src="assets/js/script.js"></script>
 </body>
 </html>
