@@ -14,7 +14,7 @@ body {
 }
 
 .heading {
-    font-family: 'Press Start 2P', system-ui;
+    font-family: 'Press Start 2P', sans-serif;
     font-size: large;
 }
 
@@ -32,7 +32,7 @@ body {
 }
 
 .choices, .display-labels, .score-area {
-    font-family: 'Press Start 2P', system-ui;
+    font-family: 'Press Start 2P', sans-serif;
     font-size: small;
 
 }
@@ -48,16 +48,17 @@ body {
 
 #btn-close-rules {
     background-color: #99e6ff;
-    font-family: 'Press Start 2P', system-ui;
+    font-family: 'Press Start 2P', sans-serif;
     padding: 10px;
     margin-left: 5%;
     margin-top: 5%;
+    border-radius: 5px;
     
 }
 
 #rules-btn  {
-    background-color: #ff8566;
-    font-family: 'Press Start 2P', system-ui;
+    background-color:  #99e6ff;
+    font-family: 'Press Start 2P', sans-serif;
     padding: 10px;
     display: flex;
     float: right;
@@ -156,7 +157,7 @@ body {
 /* Game over screen */
 #player-win-box, #cpu-win-box {
     background-color: #0099cc;
-    font-family: 'Press Start 2P', system-ui;
+    font-family: 'Press Start 2P', sans-serif;
     font-size: small;
     position: fixed;
     top: 10%;
@@ -190,7 +191,7 @@ body {
 
 #replay-btn {
     background-color: #99e6ff;
-    font-family: 'Press Start 2P', system-ui;
+    font-family: 'Press Start 2P', sans-serif;
     position: relative;
     align-self: baseline center;
     margin: auto;
@@ -213,6 +214,8 @@ body {
     width: 80vw;
     margin: auto;
     height: 10vh;
+    margin-top: 7.5%;
+    margin-bottom: 5%;
     
 }
 
@@ -463,6 +466,8 @@ body {
 
     /* Game end window */
     #player-win-box, #cpu-win-box {
-        height:80vh;
+        position: fixed;
+        height:90%;
+        width: 90vw;
     }
 }
