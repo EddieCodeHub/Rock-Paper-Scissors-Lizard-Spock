@@ -5,7 +5,7 @@ let result;
 let winner;
 let rulesButton = document.getElementById("rules-btn");
 let closeRulesButton = document.getElementById("btn-close-rules");
-
+let modal = document.getElementById("modal");
 
 // Event listeners for rules modal
 rulesButton.addEventListener("click", ()=> {
@@ -51,7 +51,7 @@ function getCpuChoice() {
 }
 
 /**
- * decides winner and triggers appropriate function 
+ * decides winner and triggers appropriate function (code credited in READEME.md)
  */
 
 function decideWinner() {
