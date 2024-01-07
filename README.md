@@ -42,7 +42,7 @@ The project has been made using HTML, CSS and will display Javascript functional
 
 #### User Goals
 
-- As a user i want to be able to se the game clearly.
+- As a user i want to be able to see the game clearly.
 
 - As a user i would like the rules to the game provided to me on the site, to prevent me from needing to open another tab.
 
