@@ -1,5 +1,7 @@
 # Rock Paper Scissors Lizard Spock - Retro Edition
 
+![image of website responsiveness](assets/images/responsive_img.png)
+
 Rock Paper Scissors Lizard Spock - Retro Edition, is a site made to provide the user a fun game to play against the computer. The site is a game of chance, inspired by "Rock Paper Scissors Lizard Spock" from the popular tv show "The Big Bang Theory", with a retro twist. 
 
 The project has been made using HTML, CSS and will display Javascript functionality.
@@ -17,6 +19,7 @@ The project has been made using HTML, CSS and will display Javascript functional
         - [Existing Features](#existing-features)
         - [Features Left To Impliment](#features-left-to-impliment)
     - [Testing](#testing)
+        - [Feature Tests](#feature-tests)
         - [Fixed Bugs](#fixed-bugs)
         - [Unfixed Bugs](#unfixed-bugs)
         - [Validator Testing](#validator-testing)
@@ -79,6 +82,8 @@ The project has been made using HTML, CSS and will display Javascript functional
 
 - The score board for my game is located below the heading, near the top of the page. This is due to it being the most important element for the player too see, and allows the game to be played without scrolling.
 
+![image of scoreboard](assets/images/scoreboard_img.png)
+
 #### Rules Modal
 
 - My rules button is positioned just under the heading, and overlaying the scoreboard in some screen sizes. This is so the user can always see it if they need to check the rules, without taking up too much space on the page.
@@ -87,11 +92,15 @@ The project has been made using HTML, CSS and will display Javascript functional
 
 - The Modal is a different colour to anything on the main page, to create a large contrast and easy differentiation.
 
+![image of rules modal](/assets/images/rules_img.png)
+
 #### Game Area
 
 - The Game area is the last element on the page. This contains my players button area and the Choice board. the placement of these elements are chosen to allow the player to play the game with everything they need on screen, to prevent scrolling being needed to play.
 
 - The colours of these areas contrast well with the background of the page and their contents.
+
+![image of game area](assets/images/game_area_img.png)
 
 #### Game End Screen
 
@@ -101,6 +110,8 @@ The project has been made using HTML, CSS and will display Javascript functional
 
 - This window is also styled to cover the buttons, so that the user cant keep playing the game once it is over.
 
+![image of game end screen](assets/images/game_end_img.png)
+
 ### Features Left To Impliment
 
 - I would have liked to have got the scores to reset, rather than using a "location.reload()" to restart the game. I did attempt to do this, but ran out of time trying to get it to work, so i had to settle for reloading the page.
@@ -108,6 +119,10 @@ The project has been made using HTML, CSS and will display Javascript functional
 - I also would have liked to remove the functionality of the buttons once the game had ended, then forcing the player to restart, but i also ran out of time trying to impliment this.
 
 ## Testing
+
+### Feature Tests
+
+- I have tested that all features of this page work and dont break
 
 ### Fixed Bugs
 
@@ -123,11 +138,35 @@ The project has been made using HTML, CSS and will display Javascript functional
 
 #### HTML
 
+- When testing My HTML with the WEC validator, my first test returned no errors.
+
+![image of html validator test](assets/images/html_validator_test.png)
+
 #### CSS
+
+- When testing my CSS with the WEC validator, my first test returned two minor errors.
+
+![image of first CSS validator test](assets/images/first_css_validator_test.png)
+
+- I then fixed these errors and tested again to return no errors.
+
+![image of last CSS validator test]
 
 #### JavaScript
 
+- When i first ran my javascript through jshint, it returned two minor errors.
+
+![image of first jshint validator test](assets/images/first_jshint_test.png)
+
+- I then fixed these errors and tested again to return no errors.
+
+![image of last jshint validator test](assets/images/last_jshint_test.png)
+
 #### Accessibility
+
+- I used google chrome Devtools "lighthouse" to assess the accessibility of my page.
+
+![image of lighthouse test](assets/images/lighthouse_test.png)
 
 ## Deployment
 
@@ -137,7 +176,7 @@ I deployed my site using 'GitHub Pages'. the following steps are how i did it
 - in the source section, select the dropdown menu, then select the master branch.
 - Once the master branch is selected, github provided a link to the completed website.
 
-A live link can be found here - 
+A live link can be found here - [Rock Paper Scissors Lizard Spock - Retro Edition](https://eddiecodehub.github.io/Rock-Paper-Scissors-Lizard-Spock/)
 
 ## Credits
 
